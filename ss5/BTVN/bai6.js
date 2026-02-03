@@ -41,6 +41,10 @@ for (let countIndex = 0; countIndex < overdueDays.length; countIndex++) {
         overdueTenDaysCount++;
     }
 }
+console.log(`Danh sách bạn đọc quá hạn (${totalOverdueReaders} người):`);
+for (let list = 0; list < readerCardIds.length; list++){
+    console.log(`${list + 1}. Mã thẻ: ${readerCardIds[list]} | Tên: ${readerNames[list]} | Sách đang mượn: ${borrowedBookCodes[list]} | Quá hạn: ${overdueDays[list]}`);
+}
 console.log(
     "Tổng số bạn đọc quá hạn ≥ 10 ngày:",
     overdueTenDaysCount,
@@ -51,6 +55,8 @@ for (let checkIndex = 0; checkIndex < borrowedBookCodes.length; checkIndex++) {
     let borrowedText = borrowedBookCodes[checkIndex].toUpperCase();
     if (borrowedText.includes("JS") && borrowedText.includes("PYT")) {
         console.log(readerCardIds[checkIndex]);
+    }else{
+        console.log("không bạn nào");
     }
 }
 let maxOverdueIndex = 0;
