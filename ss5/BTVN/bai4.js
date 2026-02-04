@@ -96,6 +96,7 @@ while (true) {
                         locate = check;
                         break;
                     }
+                }
                     if (locate == -1){
                         alert("không tìm thấy sách")
                     }else{
@@ -103,9 +104,9 @@ while (true) {
                         bookname.splice(locate, 1);
                         bookStatus.splice(locate, 1);
                     }
-                }
-                break;
-            }
+                    break;
+                } 
+            
             case 0:
                 console.log("Kết thúc và in báo cáo cuối");
                 break;
